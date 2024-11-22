@@ -29,7 +29,7 @@
    <ImageView fx:id="logoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
    <HBox alignment="TOP_CENTER" minHeight="-Infinity" prefHeight="44.0" prefWidth="260.0">
       <children>
-         <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" text="Start" />
+         <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" text="Start" wrapText="true" />
          <Button mnemonicParsing="false" text="Quit" />
       </children>
    </HBox>

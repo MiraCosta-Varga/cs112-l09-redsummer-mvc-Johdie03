@@ -1,10 +1,22 @@
 package cs112.lab09.controllers;
 
+import cs112.lab09.MainApplication;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import javax.imageio.IIOException;
+import javax.swing.*;
+import java.io.IOException;
 
 public class MainController {
     @FXML
@@ -21,13 +33,21 @@ public class MainController {
     }
 
     @FXML
-    protected void onStartButtonClicked(){
-        System.out.println ("start clicked");
+    protected void onStartButtonClicked (ActionEvent actionEvent) throws IOException {
+        //get map view as a scene
+        Parent mapView = FXMLLoader.load(MainApplication.class.getResource("map-view.fxml"));
+        Scene mapViewScene = new Scene(mapView);
+        //get stage
+        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        //set scene (change) for our stage
+        window.setScene(mapViewScene);
+        //show the stage
+        window.show();
 
     }
 
     @FXML
     protected void onQuitButtonClicked(){
-        System.out.println ("quit clicked");
+        Platform.exit();
     }
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.EventController">
+   <bottom>
+      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onCloseButtonClicked" text="Close" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="locationLabel" text="Location" />
+            <Label fx:id="dataLabel" text="Date" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="descriptionLabel" text="Description" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="revisedDescriptionLabel" text="RevisedDescription" textAlignment="CENTER" wrapText="true" />
+               </children></VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
